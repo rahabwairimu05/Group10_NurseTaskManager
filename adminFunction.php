@@ -51,7 +51,7 @@
 						<a href="#" class="button big" id="admin">Delete Administrator</a>
 					</li>
 					<li>
-						<a href="#" class="button big" id="view">View Administrator</a>
+						<a href="#" class="button big" id="view">View Administrators</a>
 					</li>
 				</ul>
 			    </section>
@@ -63,7 +63,7 @@
 			<div class="close-button">X</div>
 		<?php
 		/**
-		*function to add and view administrator
+		*functions to add and view administrator objects 
 		*/
         include_once ("Administrator.php");
         $obj = new Administrator();
@@ -79,6 +79,9 @@
 	    </tr>";
 	    while ($row) {
 		if ($i%2==0){
+		/**
+		*Setting the colour of rows and columns for table
+		*/
 	    $style ="style='background-color: BurlyWood'";
 	    }
 	    else{
