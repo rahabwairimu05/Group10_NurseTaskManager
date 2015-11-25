@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script src="script.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+<style type="text/css">
+    body {
+    background-color: #CCC;
+    margin:80px 80px 100px 100px;
+}
+
+div#fixedheader {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    background:#333;
+    padding:20px;
+    background-color:green;
+}
+div#fixedfooter {
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    
+    background:#333;
+    padding:8px;
+    background-color:green;
+}
+</style>
+</head>
+<body>
+
+<div id="fixedheader"> <center><h2>Register as a nurse</h2></center></div>
+
+<CENTER><h2>Register a new nurse</h2></CENTER>
+<center>
+    <form>
+    <label for="nurseid">Nurse Id</label><input type="text" id="nurseid" name="nurseid" size="40"><br>
+    <label for="nursefname">Nurse First Name</label><input type="text" id="nursefname" name="nursefname" size="40"><br>
+    <label for="nursesname">Nurse Second Name</label><input type="text" id="nursesname" name="nursesname" size="40"><br>
+    <label for="nursecontact"> Contact</label><input type="text" id="nursecontact" name="nursecontact" size="40"><br>
+    <button id="mybtn" onclick="addNurse()">Register</button>
+    <!-- <input type="submit" value="Register"> -->
+    </form>
+    </center>
+    <div id="fixedfooter"><center>footer working</center></div>
+
+
+</body>
+</html>
+
+
+
+
+
