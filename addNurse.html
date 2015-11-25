@@ -3,7 +3,7 @@
 <head>
 <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 <script src="script.js"></script>
-<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+<!--css code to style the page-->
 <style type="text/css">
     body {
     background-color: #CCC;
@@ -32,19 +32,20 @@ div#fixedfooter {
 </style>
 </head>
 <body>
-
+<!--header, for registering a nurse-->
 <div id="fixedheader"> <center><h2>Register as a nurse</h2></center></div>
 
 <CENTER><h2>Register a new nurse</h2></CENTER>
 <center>
+<!--Form for the nurse to enter all their details-->
     <form>
     <label for="nurseid">Nurse Id</label><input type="text" id="nurseid" name="nurseid" size="40"><br>
     <label for="nursefname">Nurse First Name</label><input type="text" id="nursefname" name="nursefname" size="40"><br>
     <label for="nursesname">Nurse Second Name</label><input type="text" id="nursesname" name="nursesname" size="40"><br>
     <label for="nursecontact"> Contact</label><input type="text" id="nursecontact" name="nursecontact" size="40"><br>
+    <!-- calls the addNurse method in the script.js-->
     <button id="mybtn" onclick="addNurse()">Register</button>
-    <!-- <input type="submit" value="Register"> -->
-    </form>
+   
     </center>
     <div id="fixedfooter"><center>footer working</center></div>
 
