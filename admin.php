@@ -1,5 +1,8 @@
 <?php
     include_once ("adb.php");
+	/**
+	*creating a class for view administrators
+	*/
     class Administrator extends adb{
     function viewAdministrators(){
 	    $str_query = "select employee_id, first_name,last_name, Contact
