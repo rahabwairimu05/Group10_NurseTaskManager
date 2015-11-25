@@ -25,10 +25,7 @@
 				}
 			}
 		?>
-			</div>
-			<div id="table_overlay"></div>
-			<div id="table_overlay_div">
-			<div class="close-button">X</div>
+
 		<?php
 			/**
 		    *function to view administrator
