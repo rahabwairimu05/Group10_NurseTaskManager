@@ -46,7 +46,8 @@
             echo"<tr><td>TASK ID</td><td>TASK NAME</td><td>TASK DESCRIPTION</td><td>START DATE</td>
                  <td>END DATE</td><td>LOCATION</td></tr>";
             while($row) {
-            echo "<tr><td>{$row["task_id"]}</td><td><a href=tasksdisplayselected.php?id=".$row["task_name"].">{$row["task_name"]}</td>";
+            echo "<tr><td>{$row["task_id"]}</td><td><a href=tasksdisplayselected.php?id=".$row["task_name"].">
+            {$row["task_name"]}</td>";
             echo"<td>{$row["task_description"]}</td><td>{$row["start_date"]}</td>
                   <td>{$row["end_date"]}</td><td>{$row["location"]}</td>";
                   $row=$obj->fetch();
