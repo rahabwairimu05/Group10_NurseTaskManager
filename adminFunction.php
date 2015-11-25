@@ -80,6 +80,33 @@
 			<div id="form_overlay"></div>
 			<div id="form_overlay_div">
 			<div class="close-button">X</div>
+
+            /**
+            *A script function to validate the form
+            */
+            <script type="text/javascript">
+            function validateForm(){
+                var pattern = /^\d{5}$/;
+				var x = document.forms["myForm"]["empid"].value;
+				var y = document.forms["myForm"]["fname"].value;
+				var z = document.forms["myForm"]["lname"].value;
+				var r = document.forms["myForm"]["contact"].value;
+				    if (!pattern || x==""){
+				    alert (" Enter a correct Administrator id ");
+				    return false;
+						}
+				    else if (y == null || y=="") {
+				    alert ("Firstname must be filled");
+				    exit();
+						}
+				    else if(z==null || z==""){
+				         alert ("Lastname must be filled");
+				        }
+				    else if(r ==null || r==""){
+				    alert("Contact must be filled");
+						}
+					}
+					</script>
 			<form method ="GET" action ="adminFunction.php">
 		    <h3><i><b>Add a new Administrator</b></i></h3>
         <table>
