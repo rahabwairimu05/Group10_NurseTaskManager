@@ -77,46 +77,7 @@
 			    </section>
 					</ul>
 			</header>
-			<div id="form_overlay"></div>
-			<div id="form_overlay_div">
-			<div class="close-button">X</div>
-			<form action= "taskFunction.php" method="GET">
-			<div>Tasks Name : <input type="text" name="tn"></div>
-		    <div>Tasks Description :</div>
-		    <div>
-			<textarea name="td" cols="30" rows="5"></textarea>
-			</div>
-            <div>Start Date : <input type="date" name="sd"></div>
-            <div>End Date : <input type="date" name="ed"></div>
-            <div>Location : <input type="text" name="location"></div>
-		    <div><input type="submit" value="Add"></div>
-			</form>
-			<?php
-			if(isset($_REQUEST['tn'])){
-				include("tasks.php");
-			/**
-		    *function set and retrieve Tasks from database
-		    */
-		    $obj=new Tasks();
-			$name=$_REQUEST['tn'];
-			$description=$_REQUEST['td'];
-			$s_date=$_REQUEST['sd'];
-			$e_date=$_REQUEST['ed'];
-			$location=$_REQUEST['location'];
-			/**
-		    *Adding objects to tasks section of database
-		    */
-			if(!$obj->addTask($name,$description,$s_date,$e_date,$location)){
-			echo "Error adding".mysql_error();
-			}else{
-			echo "Adding $name, $description, $s_date, $e_date, $location";
-				}
-			}
-		?>
-			</div>
-			<div id="table_overlay"></div>
-			<div id="table_overlay_div">
-			<div class="close-button">X</div>
+
 		<?php
 			/**
 		    *function to view administrator
