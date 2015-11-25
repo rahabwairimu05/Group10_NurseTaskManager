@@ -14,6 +14,7 @@ function sendRequest(u) {
 
 function addNurse(){
    /*nurse id*/
+   alert("clicked");
     var nurseid = $("#nurseid").val();
     alert(nurseid);
     /*nurse first name*/
