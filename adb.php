@@ -1,8 +1,13 @@
 <?php
 
 /**
+<<<<<<< HEAD
  * author: Aelaf dafla
  * date:
+=======
+ *@author: Aelaf Dafla
+ *date : 26/11/2015
+>>>>>>> implementation_version_1
  * description: A root class for all manage classes. This class communicates with DB
  */
 
