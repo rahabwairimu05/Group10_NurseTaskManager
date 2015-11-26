@@ -2,6 +2,7 @@
 
 /**
  *@author: Aelaf Dafla
+ *date 26/11/2015
  * description: A root class for all manage classes. This class communicates with DB
  */
 
