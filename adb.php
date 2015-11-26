@@ -1,9 +1,9 @@
 <?php
 
 /**
- *author: Aelaf Dafla
- *date :
- *description: A root class for all manage classes. This class communicates with DB
+ * author:Aelaf dafla
+ * date:
+ * description: A root class for all manage classes. This class communicates with DB
  */
 
 define("DB_HOST", 'localhost');
