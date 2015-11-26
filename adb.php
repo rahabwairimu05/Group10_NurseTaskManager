@@ -3,7 +3,7 @@
 /**
  *author: Aelaf Dafla
  *date :
- * description: A root class for all manage classes. This class communicates with DB
+ *description: A root class for all manage classes. This class communicates with DB
  */
 
 define("DB_HOST", 'localhost');
