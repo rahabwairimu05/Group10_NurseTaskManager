@@ -23,7 +23,7 @@ function addTask(){
 	$theTask = new Task();
 	$id= $_GET['taskid'];
 	$name= $_GET['taskname'];
-	$desc= $_GET['tascdesc'];
+	$desc= $_GET['taskdesc'];
 	$sdate= $_GET['sdate'];
 	$edate= $_GET['edate'];
 
