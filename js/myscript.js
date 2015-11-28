@@ -27,7 +27,7 @@ function addTask(){
     var edate = $("#edate").val();
     
   
-var strUrl = myurl+"cmd=1&taskid="+taskid+"taskname="+taskname+"&taskdesc="
+var strUrl = myurl+"cmd=1&taskid="+taskid+"&taskname="+taskname+"&taskdesc="
 +taskdesc+"&sdate="+sdate+"&edate="+edate;
 
 prompt("url",strUrl);
