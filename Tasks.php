@@ -10,7 +10,7 @@ include_once ("adb.php");
 */
 class Tasks extends adb{
      /*
-     * Select all task in the database
+     * A function to view all task
      */
     function viewTasks(){
         $str_query="select * from tasks";
