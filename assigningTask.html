@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+
+</head>
+<body>
+
+<div id="fixedheader"> <center><h2>Assign A TASK TO A NURSE</h2></center></div>
+
+<CENTER><h2>Assign Task</h2></CENTER>
+<center>
+
+ <!-- input fields to assign tasks to the nurses -->
+ 
+    <form>
+    <label for="edate">Nurse id</label><input type="text" id="nid" name="nid" size="40"><br>
+    <label for="edate">Nurse Name</label><input type="text" id="name" name="name" size="40"><br>
+    <label for="taskid">Task id</label><input type="text" id="taskid" name="taskid" size="40"><br>
+    <label for="taskname">Task Name</label><input type="text" id="taskname" name="taskname" size="40"><br>
+    <label for="taskdesc">Task Description</label><input type="textarea" id="taskdesc" name="taskdesc" size="40"><br>
+    <label for="sdate">Start date</label><input type="date" id="sdate" name="sdate" size="40"><br>
+    <label for="edate">End date</label><input type="date" id="edate" name="edate" size="40"><br>
+
+    <button id="mybtn" onclick="assignTask()">Assign Task</button>
+  
+    </form>
+    </center>
+    <div id="fixedfooter"><center>footer working</center></div>
+
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script src="myscript.js"></script>
+</body>
+</html>
+
+
+
+
+
