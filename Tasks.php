@@ -16,5 +16,6 @@ class Tasks extends adb{
         $str_query="select * from tasks";
         $result=$this->query($str_query).mysql_error();
         $row=$this->fetch;    }
-}
+      }
+
 ?>
