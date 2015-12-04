@@ -1,5 +1,7 @@
 <?php
-
+/**
+*checking whether the variable cmd is empty
+*/
 if(!isset($_REQUEST['cmd'])){
 	echo '{"result": 0, "message": "unknown command"}';
 	return;
@@ -18,6 +20,9 @@ echo '{"result": 0, "message": "Unknown command"}';
 	break;
 }
 
+/**
+*function to receive information from the javascript page
+*/
 function assignTask(){
 	include "assignTask.php";
 	$theTask = new AssignTask();
@@ -28,7 +33,9 @@ function assignTask(){
 	$desc= $_GET['taskdesc'];
 	$sdate= $_GET['sdate'];
 	$edate= $_GET['edate'];
-
+/**
+*executes the assign method  which inserts to the dtabase
+*/
 	if (!$theTask->assignTask($id,$name,$tid,$tname,$desc,$sdate,$edate)) {
 
 		echo '{"result": 0, "message": "could not assign task"}';
