@@ -34,7 +34,7 @@ function assignTask(){
 	$sdate= $_GET['sdate'];
 	$edate= $_GET['edate'];
 /**
-*executes the assign method  which inserts to the dtabase
+*executes the assign method  which inserts to the database
 */
 	if (!$theTask->assignTask($id,$name,$tid,$tname,$desc,$sdate,$edate)) {
 
