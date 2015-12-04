@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<!-- using the externam css file-->
  <link rel="stylesheet" type="text/css" href="css/style.css"> 
 
 </head>
 <body>
 
-<div id="fixedheader"> <center><h2>Assign A TASK TO A NURSE</h2></center></div>
+<div id="fixedheader"> <center><h2>ASSIGNING A TASK TO A NURSE</h2></center></div>
 
 <CENTER><h2>Assign Task</h2></CENTER>
 <center>
@@ -22,15 +22,15 @@
     <label for="taskdesc">Task Description</label><input type="textarea" id="taskdesc" name="taskdesc" size="40"><br>
     <label for="sdate">Start date</label><input type="date" id="sdate" name="sdate" size="40"><br>
     <label for="edate">End date</label><input type="date" id="edate" name="edate" size="40"><br>
-
+<!--Javascript method executed when there is a button click-->
     <button id="mybtn" onclick="assigningTask()">Assign Task</button>
   
     </form>
     </center>
     <div id="fixedfooter"><center>footer working</center></div>
-
+<!--Importing external js to be used-->
 <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-<script src="myscript.js"></script>
+<script src="task.js"></script>
 </body>
 </html>
 
