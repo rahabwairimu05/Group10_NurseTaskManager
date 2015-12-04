@@ -23,6 +23,24 @@
 				$('#table_overlay_div').fadeOut('fast');
 			});
 		});
+		/**
+		*function to highlight the selected click input option(task)
+		*/
+		$(document).ready(function(){
+			$('#task').click(function(){
+				$('#form_overlay').fadeIn('slow');
+				$('#form_overlay_div').fadeIn('slow');
+			});
+		});
+		/**
+		*function to highlight the selected click input option(close button)
+		*/
+		$(document).ready(function(){
+			$('.close-button').click(function(){
+				$('#form_overlay').fadeOut('fast');
+				$('#form_overlay_div').fadeOut('fast');
+			});
+		});
 		</script>
 	</head>
 	<body>
@@ -91,6 +109,55 @@
 	    }
 	    echo "</table></center>";
 	    ?>
+			</div>
+			<div id="form_overlay"></div>
+			<div id="form_overlay_div">
+			<div class="close-button">X</div>
+			<form method ="GET" action ="adminFunction.php">
+		    <h3><i><b>Add a new Administrator</b></i></h3>
+        <table>
+	        <tr>
+		    <td>
+		    <div>Employee id:</td><td><input type="Text" name="empid" size="40"></div>	</td>
+		    </tr>
+		    <tr>
+			<td>
+			<div>First Name:</td><td> <input type="text" name="fname" size="40"></div>
+			</td>
+		    </tr>
+		    <tr>
+			<td><div>Second Name:</td><td><input type="text" name="lname" size="40"></div></td>
+		    </tr>
+		    <tr>
+			<td><div>Contact:</td><td><input type="text" name="contact" size="40"></div></td>
+		    </tr>
+		    <tr>
+			<td><div><input type="Submit" value="Add"></div></td>
+		    </tr>
+        </table>
+	        </form>
+        <?php
+        /**
+		*function set and retrieve administrator information from database
+		*/
+		if (isset ($_REQUEST['empid'])){
+	    include_once ("Administrator.php");
+		$obj = new Administrator();
+		$employee_id = $_REQUEST['empid'];
+		$First_name = $_REQUEST['fname'];
+		$Last_name = $_REQUEST['lname'];
+		$Contact = $_REQUEST['contact'];
+		/**
+		*Adding object to administrator section of database
+		*/
+	    if(!$obj->addAdministrator($employee_id,$First_name,$Last_name,$Contact)){
+		echo "Error adding";
+	}
+	else{
+		echo "$First_name successfully added";
+	}
+			}
+		?>
 			</div>
 	</body>
 </html>
