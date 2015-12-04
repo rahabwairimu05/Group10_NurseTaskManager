@@ -29,7 +29,7 @@ function assigningTask(){
     var edate = $("#edate").val();
     
   
-var strUrl = myurl+"cmd=1&nid="+nurseid"&name="+name"&taskid="+taskid+"&taskname="+taskname+"&taskdesc="
+var strUrl = myurl+"cmd=1&nid="+nurseid+"&name="+name+"&taskid="+taskid+"&taskname="+taskname+"&taskdesc="
 +taskdesc+"&sdate="+sdate+"&edate="+edate;
 
 prompt("url",strUrl);
