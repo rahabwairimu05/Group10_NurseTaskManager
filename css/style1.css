@@ -425,7 +425,7 @@ body {
 	-ms-box-shadow:0 0 50 #000;
 	display:none;
 }
-#table_overlay{
+#table_overlay, #table_overlay1{
 	width:auto;
 	height:auto;
 	background:#000;
@@ -438,7 +438,7 @@ body {
 	z-index:1000;
 	display:none;
 }
-#table_overlay_div{
+#table_overlay_div, #table_overlay_div1{
 	background-color:white;
 	width:auto;
 	height:auto;
