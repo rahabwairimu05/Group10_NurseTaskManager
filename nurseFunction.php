@@ -79,75 +79,81 @@
 			</header>
 	    </div>
 	    <div id="table_overlay"></div>
-		<div id="table_overlay_div">
-		<div class="close-button">X</div>
-	    <?php
-		/**
-		*function to add and view administrator
-		*/
-        include_once ("nurses.php");
-        $objnurse = new Nurses();
-	    $objnurse->viewAllNurses();
-        if(!$row=$objnurse->fetch()){
-        echo "There are no nurses currently";
-	    }
-	    /**
-		*Setting a table to contain the contents of tasks objects
-		*/
-	    echo "<center><table border='1'>";
-	    echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td><td>Department</td>
-	          <td>Contact</td></tr>";
-	    while ($row) {
-		echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
-		echo "<td>{$row['contact']}</td></tr>";
-		$row =$objnurse->fetch();
-	    }
-	    echo "</table></center>";
-	    ?>
+			<div id="table_overlay_div">
+				<div class="close-button">X</div>
+	    		<?php
+				/**
+				*function to view nurses
+				*/
+        		include_once ("nurses.php");
+        		$objnurse = new Nurses();
+	    		$objnurse->viewAllNurses();
+        		if(!$row=$objnurse->fetch()){
+        			echo "There are no nurses currently";
+	    		}
+	    		/**
+				*Setting a table to contain the contents of tasks objects
+				*/
+	    			echo "<center><table border='1'>";
+	    			echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td><td>Department</td>
+	          		<td>Contact</td></tr>";
+	    			while ($row) {
+						echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
+						echo "<td>{$row['contact']}</td></tr>";
+						$row =$objnurse->fetch();
+	    			}
+	    			echo "</table></center>";
+	    		?>
 		</div>
-			<div id="table_overlay1"></div>
+		<div id="table_overlay1"></div>
 			<div id="table_overlay_div1">
 				<div class="close-button">X</div>
 				<?php
-include_once ("nurses.php");
-$objnurse = new Nurses();
-	$objnurse->viewAllNurses();
+				/**
+				*function to view and delete nurses
+				*/
+				include_once ("nurses.php");
+				$objnurse = new Nurses();
+				$objnurse->viewAllNurses();
 
-	if(!$row=$objnurse->fetch()){
-echo "There are no nurses currently";
-	}
+				if(!$row=$objnurse->fetch()){
+					echo "There are no nurses currently";
+				}
 
-	echo "<center><table border='1'>";
-	echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td>
-	      <td>Contact</td></tr>";
-	while ($row) {
-		echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
-		echo "<td>{$row['contact']}</td></tr>";
-		$row =$objnurse->fetch();
-	}
-	echo "</table></center>";
-	
-?>
+					echo "<center><table border='1'>";
+					echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td>
+	    			<td>Contact</td></tr>";
+					while ($row) {
+						echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
+						echo "<td>{$row['contact']}</td></tr>";
+						$row =$objnurse->fetch();
+					}
+					echo "</table></center>";	
+				?>
+
+<!-- A form to take in the id of nurse that will be deleted-->
 <center><form action="nurseFunction.php" method="GET">
 <p><i><b>Delete a nurse</b></i></p>
 	<div>Employee id:<input type="Text" name="id" size="30"></div>
 	<div><input type="Submit" value="Delete"></div>
 </form></center>
-<?php 
-if (isset($_REQUEST['id'])){
-	include_once("nurses.php");
-	$obj_nurse= new Nurses();
-	$theId=$_REQUEST['id'];
+
+				<?php 
+				/**
+				 *implementation of the delete nurse function
+				**/
+				if (isset($_REQUEST['id'])){
+					include_once("nurses.php");
+					$obj_nurse= new Nurses();
+					$theId=$_REQUEST['id'];
 		
-	if(!$obj_nurse->deleteNurse($theId)){
-		echo "The nurse was not deleted";
-	}
-	else{
-		echo "A nurse was deleted successfully";
-	}
-	
-}
-?>
-</div>
+					if(!$obj_nurse->deleteNurse($theId)){
+						echo "The nurse was not deleted";
+					}
+					else{
+						echo "A nurse was deleted successfully";
+					}
+				}
+				?>
 	</body>
 </html>
