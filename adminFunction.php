@@ -83,7 +83,7 @@
 		/**
 		*function to add and view administrator
 		*/
-        include_once ("Administrator.php");
+        include_once ("admin.php");
         $obj = new Administrator();
 	    $obj->viewAdministrators();
         if(!$row=$obj->fetch()){
