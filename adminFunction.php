@@ -201,9 +201,14 @@
 		<?php 
 if (isset($_REQUEST['id'])){
 	include_once("nurses.php");
+    /**
+	*Requesting from database to retrieve and delete admin information from database
+	*/
 	$obj_nurse= new Nurses();
 	$theId=$_REQUEST['id'];
-		
+    /**
+    *Displaying success or error message after deletion of administrator
+    */		
 	if(!$obj_nurse->deleteNurse($theId)){
 		echo "The nurse was not deleted";
 	}
