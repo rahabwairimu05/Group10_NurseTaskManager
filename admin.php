@@ -8,6 +8,9 @@
 	*This function allows for the view administrators queries to be performed
 	*/
     function viewAdministrators(){
+	/**
+	*Database is querried and then the admin with the unique id will be added/deleted
+	*/
 	    $str_query = "select employee_id, first_name,last_name, Contact
 				     from administrators";
 				     return $this->query($str_query);
