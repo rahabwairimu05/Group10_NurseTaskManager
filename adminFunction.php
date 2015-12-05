@@ -177,6 +177,22 @@
 		if(!$row=$obj->fetch()){
 		echo " No administrator in the database";
 		}
+		
+		/**
+		*Starting code for tables to include admin information
+		*/
+		echo "<centre><table border = '1'>";
+		echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td><td>Contact</td></tr>";
+		while ($row) {
+			echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
+			echo "<td>{$row['contact']}</td></tr>";
+			$row = $obj->fetch();
+		}
+		echo "</table></center>";
+		
+		?>
+		}
+		
 		}
 		
 		
