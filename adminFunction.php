@@ -191,9 +191,31 @@
 		echo "</table></center>";
 		
 		?>
-		}
+		
+		<center><form action="adminFunction.php" method= "GET">
+		<p><i><b> Delete an Administrator</b></i></p>
+		<div>Employee id: <input type="Text" name="id" size="30"></div>
+		<div><input type="Submit" value="Delete"></div>
+		</form></center>
+		
+		<?php
+		/**
+		*Form that will show table before user deletes admin
+		*/
+		if (isset($_REQUEST[id'])){
+		include_once("Admistrator.php");
+		$obj=new Administrator();
+		$theId=$_REQUEST['id'];
+		/**
+		*Requesting from database to retrieve and delete admin
+		*/
+		
+		
 		
 		}
+		
+		
+		
 		
 		
 			
