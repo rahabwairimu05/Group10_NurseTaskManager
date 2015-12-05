@@ -170,6 +170,14 @@
 		*/
 		include_once ("Administrator.php");
 		$obj = new Administrator();
+		$obj->viewAdministrators();
+		/**
+		/*Checking database to see if administrators are available
+		*/
+		if(!$row=$obj->fetch()){
+		echo " No administrator in the database";
+		}
+		}
 		
 		
 			
