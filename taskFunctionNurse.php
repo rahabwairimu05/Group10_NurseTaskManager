@@ -65,7 +65,7 @@
 		<div class="close-button">X</div>
 		 <?php
 		/**
-		*function to add and view administrator
+		*function to view task
 		*/
         include_once ("Tasks.php");
         $obj = new Tasks();
