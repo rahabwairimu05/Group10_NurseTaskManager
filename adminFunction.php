@@ -198,26 +198,21 @@
 		<div><input type="Submit" value="Delete"></div>
 		</form></center>
 		
-		<?php
-		/**
-		*Form that will show table before user deletes admin
-		*/
-		if (isset($_REQUEST[id'])){
-		include_once("Admistrator.php");
-		$obj=new Administrator();
-		$theId=$_REQUEST['id'];
-		/**
-		*Requesting from database to retrieve and delete admin
-		*/
+		<?php 
+if (isset($_REQUEST['id'])){
+	include_once("nurses.php");
+	$obj_nurse= new Nurses();
+	$theId=$_REQUEST['id'];
 		
-		
-		
-		}
-		
-		
-		
-		
-		
-			
+	if(!$obj_nurse->deleteNurse($theId)){
+		echo "The nurse was not deleted";
+	}
+	else{
+		echo "A nurse was deleted successfully";
+	}
+	
+}
+?>
+</div>
 	</body>
 </html>
