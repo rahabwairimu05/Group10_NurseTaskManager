@@ -159,5 +159,19 @@
 			}
 		?>
 			</div>
+			
+			<div id= "table_overlay1"></div>
+			<div id= "table_overlay_div1"></div>
+			<div class="close-button">X</div>
+		
+		<?php
+		/**
+		*Function to display admin in a table before deleting it
+		*/
+		include_once ("Administrator.php");
+		$obj = new Administrator();
+		
+		
+			
 	</body>
 </html>
