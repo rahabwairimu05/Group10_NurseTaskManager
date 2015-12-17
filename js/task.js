@@ -11,12 +11,17 @@ function sendRequest(u) {
     var result = $.parseJSON(obj.responseText);
     return result;	//return object
 }
-
+/**
+*A function which takes the input from the html file
+*
+*/
 function assigningTask(){
     alert("clicked");
-   /*Task id*/
+   /*Nurse id*/
    var nurseid = $("#nid").val();
+   /*Nurse name*/
    var name = $("#name").val();
+   /*Task id*/
     var taskid = $("#taskid").val();
     alert(taskid);
     /*task name*/
@@ -28,18 +33,15 @@ function assigningTask(){
     /*task end date*/
     var edate = $("#edate").val();
     
-  
-var strUrl = myurl+"cmd=1&nid="+nurseid+"&name="+name+"&taskid="+taskid+"&taskname="+taskname+"&taskdesc="
-+taskdesc+"&sdate="+sdate+"&edate="+edate;
+ /* A url to pass variables to the taskAssignment.php*/ 
+var strUrl = myurl+"cmd=1&nId="+nurseid+"&name="+name+"&taskId="+taskid+"&taskName="+taskname+"&taskDesc="
++taskdesc+"&sDate="+sdate+"&eDate="+edate;
 
+/*passing the url*/
 prompt("url",strUrl);
 var objResult = sendRequest(strUrl);
-var errorArea = document.getElementById("error_areap");
-document.getElementById("error_areap").innerHTML = '<div class="progress"><div class="indeterminate"></div></div>';
-if(objResult.result == 0) {
-    document.getElementById("error_areap").innerHTML = '<div class="chip red white-text">'+objResult.message+'<i class="material-icons">close</i></div>';
-    return;
-}
+
+
 /*Clearing the input text*/
  $("#taskid").val('');
  $("#taskname").val('');
@@ -48,8 +50,6 @@ if(objResult.result == 0) {
  $("#edate").val('');
 $("#nid").val();
 $("#name").val();
-
-document.getElementById("error_areap").innerHTML = '<div class="chip green white-text">'+objResult.message+'<i class="material-icons">close</i></div>';
 
 // location.reload();
 }

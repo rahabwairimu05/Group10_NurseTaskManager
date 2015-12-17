@@ -7,7 +7,7 @@ if(!isset($_REQUEST['cmd'])){
 	return;
 }
 $cmd = $_REQUEST['cmd'];
-
+/*If cmd=1, it executes the assignTask method*/
 switch ($cmd) {
 	case '1':
 		assignTask();
@@ -26,17 +26,25 @@ echo '{"result": 0, "message": "Unknown command"}';
 function assignTask(){
 	include "assignTask.php";
 	$theTask = new AssignTask();
-	$id= $_GET['nid'];
+	$id= $_GET['nId'];
 	$name= $_GET['name'];
-	$tname= $_GET['taskname'];
-	$tid= $_GET['taskid'];
-	$desc= $_GET['taskdesc'];
-	$sdate= $_GET['sdate'];
-	$edate= $_GET['edate'];
+	$tId= $_GET['taskId'];
+	$tName= $_GET['taskName'];
+	$desc= $_GET['taskDesc'];
+	$sDate= $_GET['sDate'];
+	$eDate= $_GET['eDate'];
 /**
 *executes the assign method  which inserts to the database
+*@param $id - this is the id of the nurse who takes the task
+*@param $name - this is the name of the nurse who takes the task
+*@param $tId - the id of the task being assigned to the nurse
+*@param $tName -the name of the task being allocated
+*@param $desc - the description of the task being allocated
+*@param $sDate - the date the nurse is supposed to start the task
+*@param $eDate - the date the nurse is supposed to end the task
+*passing the variables to assign task to the nurse
 */
-	if (!$theTask->assignTask($id,$name,$tid,$tname,$desc,$sdate,$edate)) {
+	if (!$theTask->assignTask($id,$name,$tId,$tName,$desc,$sDate,$eDate)) {
 
 		echo '{"result": 0, "message": "could not assign task"}';
 	}
