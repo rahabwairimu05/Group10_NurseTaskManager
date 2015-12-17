@@ -1,4 +1,10 @@
 <?php
+
+/**
+*@author Rahab Wangari
+*@date 17/12/2015
+*description:  a method which connects to the database to assign a task
+*/
 include "adb.php";
 
 class AssignTask extends adb{

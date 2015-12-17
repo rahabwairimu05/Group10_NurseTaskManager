@@ -1,5 +1,10 @@
 <?php
 /**
+*@author Rahab Wangari
+*@date 17/12/2015
+*file to assign a task
+*/
+/**
 *checking whether the variable cmd is empty
 */
 if(!isset($_REQUEST['cmd'])){
