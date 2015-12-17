@@ -2,7 +2,8 @@
 /**
 *@author Rahab Wangari
 *@date 17/12/2015
-*file to assign a task
+*description:file to assign a task
+*Code starndard: PSR
 */
 /**
 *checking whether the variable cmd is empty

@@ -1,6 +1,7 @@
 /**
 *@author Rahab Wangari
 *@date 17/12/2015
+*description:a file to take input from the user from the html page
 */
 
 /* u is url */

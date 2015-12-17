@@ -4,6 +4,7 @@
 *@author Rahab Wangari
 *@date 17/12/2015
 *description:  a method which connects to the database to assign a task
+*Code starndard: PSR
 */
 include "adb.php";
 
