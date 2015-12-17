@@ -65,7 +65,11 @@
 		<div class="close-button">X</div>
 		 <?php
 		/**
-		*function to add and view administrator
+		*@author Reuben Larmie
+		*COde standard: PSR
+		*function to retrieve and display the tasks that have been assigned to nurses
+		*The method fetches the details of the task
+		*The method prints to screen an error message when query fails
 		*/
         include_once ("Tasks.php");
         $obj = new Tasks();
@@ -75,6 +79,10 @@
 	    }
 	    /**
 		*Creating code to display a table to contain the contents of tasks objects
+		*
+		*The details of the tasks that are printed in a table.
+		*There's a loop that echoes the details of the task.
+		*The loop steps through all the task and fetches in rows 
 		*/
 	    echo "<center><table border='1'>";
 	    echo "<tr><td>task_id</td><td>task_name</td><td>task_description</td><td>start_date</td>
