@@ -83,7 +83,7 @@
 		/**
 		*function to add and view administrator
 		*/
-        include_once ("Administrator.php");
+        include_once ("admin.php");
         $obj = new Administrator();
 	    $obj->viewAdministrators();
         if(!$row=$obj->fetch()){
@@ -159,5 +159,65 @@
 			}
 		?>
 			</div>
+			
+			<div id= "table_overlay1"></div>
+			<div id= "table_overlay_div1"></div>
+			<div class="close-button">X</div>
+		
+		<?php
+		/**
+		*Function to display admin in a table before deleting it
+		*/
+		include_once ("Administrator.php");
+		$obj = new Administrator();
+		$obj->viewAdministrators();
+		/**
+		/*Checking database to see if administrators are available
+		*/
+		if(!$row=$obj->fetch()){
+		echo " No administrator in the database";
+		}
+		
+		/**
+		*Starting code for tables to include admin information
+		*/
+		echo "<centre><table border = '1'>";
+		echo "<tr><td>Employee_id</td><td>First Name</td><td>Last Name</td><td>Contact</td></tr>";
+		while ($row) {
+			echo "<tr><td>{$row['employee_id']}</td><td>{$row['first_name']}</td><td>{$row['last_name']}</td>";
+			echo "<td>{$row['contact']}</td></tr>";
+			$row = $obj->fetch();
+		}
+		echo "</table></center>";
+		
+		?>
+		
+		<center><form action="adminFunction.php" method= "GET">
+		<p><i><b> Delete an Administrator</b></i></p>
+		<div>Employee id: <input type="Text" name="id" size="30"></div>
+		<div><input type="Submit" value="Delete"></div>
+		</form></center>
+		
+		<?php 
+if (isset($_REQUEST['id'])){
+	include_once("nurses.php");
+    /**
+	*Requesting from database to retrieve and delete admin information from database
+	*/
+	$obj_nurse= new Nurses();
+	$theId=$_REQUEST['id'];
+    /**
+    *Displaying success or error message after deletion of administrator
+    */		
+	if(!$obj_nurse->deleteNurse($theId)){
+		echo "The nurse was not deleted";
+	}
+	else{
+		echo "A nurse was deleted successfully";
+	}
+	
+}
+?>
+</div>
 	</body>
 </html>
